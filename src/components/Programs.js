@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import apiClient from '../services/apiClient';
-import './Programs.css';
 
 class Programs extends PureComponent {
 	state = {
