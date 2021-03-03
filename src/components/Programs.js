@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import apiClient from '../services/apiClient';
+import './Programs.css';
 
 class Programs extends PureComponent {
 	state = {
@@ -27,15 +28,15 @@ class Programs extends PureComponent {
 		const { programs } = this.state;
 
 		return (
-			<div>
+			<div className="wrapper">
 				<h1>Programs:</h1>
-				<ul>
+				<ul className='list-no-decoration'>
           {console.log('programs: ', programs)}
 					{programs.map((program, index) => {
 						const { title, version, short_description } = program;
 
 						return (
-							<li key={index}>
+							<li key={index} className='App-item'>
 								<h2>{title}</h2>
                 <p>{version}</p>
                 <p>{short_description}</p>
