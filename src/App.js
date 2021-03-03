@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { PureComponent } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import InfoWithFormat from './components/InfoWithFormat';
+import Programs from './components/Programs';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends PureComponent {
+	render() {
+		return (
+			<div>
+				<Switch>
+					<Route exact path={'/'} component={Programs} />
+					<Route exact path={'/info/:id'} component={InfoWithFormat} />
+				</Switch>
+			</div>
+		);
+	}
 }
 
 export default App;
