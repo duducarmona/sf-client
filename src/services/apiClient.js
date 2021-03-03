@@ -12,8 +12,8 @@ class ApiClient {
     return this.apiClient.get('/');
   }
 
-	getInfoWithFormat(id) {
-		return this.apiClient.get(`/info/${id}`);
+	getProgramWithDev(id) {
+		return this.apiClient.get(`/programs/${id}`);
 	}
 }
 

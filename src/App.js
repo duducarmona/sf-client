@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import InfoWithFormat from './components/InfoWithFormat';
+import ProgramWithDev from './components/ProgramWithDev';
 import Programs from './components/Programs';
 import './App.css';
 
@@ -10,7 +10,7 @@ class App extends PureComponent {
 			<div className="App">
 				<Switch>
 					<Route exact path={'/'} component={Programs} />
-					<Route exact path={'/info/:id'} component={InfoWithFormat} />
+					<Route exact path={'/programs/:id'} component={ProgramWithDev} />
 				</Switch>
 			</div>
 		);

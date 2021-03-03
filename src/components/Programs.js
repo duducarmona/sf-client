@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import apiClient from '../services/apiClient';
+import { Link } from 'react-router-dom';
 
 class Programs extends PureComponent {
 	state = {
@@ -30,15 +31,16 @@ class Programs extends PureComponent {
 			<div className="wrapper">
 				<h1>Programs:</h1>
 				<ul className='list-no-decoration'>
-          {console.log('programs: ', programs)}
 					{programs.map((program, index) => {
-						const { title, version, short_description } = program;
+						const { title, version, short_description, id } = program;
 
 						return (
 							<li key={index} className='App-item'>
+              <Link to={`/programs/${id}`}>
 								<h2>{title}</h2>
                 <p>{version}</p>
                 <p>{short_description}</p>
+              </Link>
 							</li>
 						);
 					})}
