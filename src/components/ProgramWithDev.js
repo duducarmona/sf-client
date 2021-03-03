@@ -50,6 +50,11 @@ class ProgramWithDev extends PureComponent {
 
 		return (
 			<div className="wrapper">
+				<div className="arrow-icon-container">
+					<i className="material-icons arrow-icon" onClick={this.props.history.goBack}>
+						arrow_back_ios_new
+					</i>
+				</div>
 				<h1>
 					{title} {version}
 				</h1>
