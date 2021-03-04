@@ -38,3 +38,21 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.arrow-icon-container {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.arrow-icon {
+  font-size: 20px;
+  color: white;
+  border-radius: 50%;
+  background-color: #61a0e4;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

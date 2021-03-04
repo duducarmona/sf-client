@@ -23,7 +23,10 @@ class ProgramWithDev extends PureComponent {
 				});
 			})
 			.catch(error => {
+				const { history } = this.props;
+
 				console.log(error);
+				history.push('/notFoundPage');
 			});
 	};
 

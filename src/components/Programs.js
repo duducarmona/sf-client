@@ -20,7 +20,10 @@ class Programs extends PureComponent {
 				});
 			})
 			.catch(error => {
+				const { history } = this.props;
+
 				console.log(error);
+				history.push('/notFoundPage');
 			});
 	};
 
@@ -30,17 +33,17 @@ class Programs extends PureComponent {
 		return (
 			<div className="wrapper">
 				<h1>Programs:</h1>
-				<ul className='list-no-decoration'>
+				<ul className="list-no-decoration">
 					{programs.map((program, index) => {
 						const { title, version, short_description, id } = program;
 
 						return (
-							<li key={index} className='App-item'>
-              <Link to={`/programs/${id}`}>
-								<h2>{title}</h2>
-                <p>{version}</p>
-                <p>{short_description}</p>
-              </Link>
+							<li key={index} className="App-item">
+								<Link to={`/programs/${id}`}>
+									<h2>{title}</h2>
+									<p>{version}</p>
+									<p>{short_description}</p>
+								</Link>
 							</li>
 						);
 					})}

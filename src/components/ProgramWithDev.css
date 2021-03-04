@@ -11,21 +11,3 @@
   margin-left: 30px;
   margin-bottom: 10px;
 }
-
-.arrow-icon-container {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-.arrow-icon {
-  font-size: 20px;
-  color: white;
-  border-radius: 50%;
-  background-color: #61a0e4;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
